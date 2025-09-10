@@ -36,7 +36,7 @@ public class Admin_Page {
 	private WebElement Add;
 	
 	@FindBy(xpath = "//span[text()='User Management ']")
-	private WebElement usermanagement;
+	private WebElement Usermanagement;
 	
 	@FindBy(xpath = "//span[text()='Job ']")
 	private WebElement job;

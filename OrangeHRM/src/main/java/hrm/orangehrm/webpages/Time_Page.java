@@ -61,7 +61,11 @@ public class Time_Page {
 		private WebElement ProjectName;;
 		@FindBy(xpath = "//span[text()='Project Info ']")
 		private WebElement ProjectInfo;
-		
+		@FindBy(xpath = "//a[text()='Customers']")
+		private WebElement CustomersDropdown;
+
+		@FindBy(xpath = "//a[text()='Projects']")
+		private WebElement ProjectsDropdown;
 		public void Time( WebElement MyTimeSheets,WebElement EmployeeTimeSheets) {
 			
 			Select sel= new Select(MyTimeSheets);

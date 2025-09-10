@@ -35,14 +35,14 @@ public class BaseClass {
 
 	@BeforeSuite
 	public void config_BS() throws SQLException {
-		System.out.println("connect to database");
+		System.out.println("connect to databaseconnection");
 		dlib.getDbconnection();
 	}
 
 	// @Parameters("BROWSER")
 	@BeforeClass
 	public void config_BC(String browser) throws Exception {
-		System.out.println("launch the browser");
+		System.out.println("launching the browser");
 		String BROWSER = flib.getdataFromPropertiesFile("browser");
 		if (BROWSER.equals("chrome")) {
 			driver = new ChromeDriver();
@@ -84,7 +84,7 @@ public class BaseClass {
 
 	@AfterSuite
 	public void config_AS() {
-		System.out.println("close the database");
+		System.out.println("close the database connection");
 		dlib.closeDbconnection();
 
 	}
