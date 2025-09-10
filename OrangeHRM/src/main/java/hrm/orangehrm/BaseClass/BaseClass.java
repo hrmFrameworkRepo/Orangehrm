@@ -20,6 +20,7 @@ import hrm.orange.webdriver.Utilityclass;
 import hrm.orange.webdriver.WebdriverUtility;
 import hrm.orangehrm.DatabaseUtility.Database_Utility;
 import hrm.orangehrm.webpages.HomePage;
+import hrm.orangehrm.webpages.LoginPage;
 
 public class BaseClass {
 	WebDriver driver = null;
@@ -63,7 +64,7 @@ public class BaseClass {
 		String USERNAME = flib.getdataFromPropertiesFile("USERNAME");
 		String PASSWORD = flib.getdataFromPropertiesFile("PASSWORD");
 		LoginPage lp = new LoginPage(driver);
-		lp.LoginToApp(URL, USERNAME, PASSWORD);
+		lp.login(USERNAME, PASSWORD);
 
 	}
 
